@@ -2,13 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Setup Python') {            
+        stage('Setup Python') {
             steps {
-                
                 sh '''
                 ls -la
                 python3 --version
-
                 '''
             }
         }
