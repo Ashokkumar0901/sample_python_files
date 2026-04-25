@@ -1,20 +1,13 @@
 pipeline {
-    agent {
-        docker 
-        }
+    agent any
 
     stages {
-        stage('Setup Python') {
-            agent {
-                docker {
-                    image 'python3-alpine'
-                }
-            }
+        stage('Setup Python') {            
             steps {
                 
                 sh '''
                 ls -la
-                python --version
+                python3 --version
 
                 '''
             }
